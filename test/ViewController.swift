@@ -56,6 +56,7 @@ class ViewController: UIViewController {
         
         a1.map()
         a1.filter()
+        a1.flatMap()
     }
 
     
