@@ -81,7 +81,6 @@ class ViewController: UIViewController {
         }
     }
     
-    
     @IBAction func testPropertiesAction(_ sender: Any) {
         
         let accessors = Accessors()
@@ -100,5 +99,42 @@ class ViewController: UIViewController {
         
         accessors.lastname = "new lastname"
     }
+    
+    @IBAction func testGenericsAction(_ sender: Any) {
+        
+        let generics = GenericsFcts()
+        
+        var leftInt = 10
+        var rightInt = 20
+        
+        print("left= \(leftInt) right=\(rightInt)")
+        generics.swapValues(&leftInt, with: &rightInt)
+        print("left= \(leftInt) right=\(rightInt)")
+        
+        
+        var left = "left"
+        var right = "right"
+        
+        print("left= \(left) right=\(right)")
+        generics.swapValues(&left, with: &right)
+        print("left= \(left) right=\(right)")
+        
+        
+        
+        let stack = Stack<Int>()
+        
+        stack.push(10)
+        stack.push(20)
+        stack.push(30)
+        
+        stack.display()
+
+        print("\(String(describing: stack.pop()))")
+        print("\(String(describing: stack.pop()))")
+        print("\(String(describing: stack.pop()))")
+
+        print("\(String(describing: stack.pop()))")
+    }
+
 }
 

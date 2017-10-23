@@ -57,6 +57,16 @@
                                     <action selector="testPropertiesAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OOD-7l-aIg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLQ-h2-Ks3">
+                                <rect key="frame" x="137" y="298" width="101" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Test Generics">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="testGenericsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PJd-MB-2Rh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -66,8 +76,10 @@
                             <constraint firstItem="huU-0Y-dcL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LLZ-w0-QMQ"/>
                             <constraint firstItem="E7Z-aE-sOs" firstAttribute="top" secondItem="huU-0Y-dcL" secondAttribute="bottom" constant="21" id="Nky-DJ-8Qc"/>
                             <constraint firstItem="huU-0Y-dcL" firstAttribute="top" secondItem="HDb-C3-tUH" secondAttribute="bottom" constant="25" id="TBL-2O-WgU"/>
+                            <constraint firstItem="nLQ-h2-Ks3" firstAttribute="top" secondItem="rfI-ZO-tOh" secondAttribute="bottom" constant="21" id="Yqb-iI-Y46"/>
                             <constraint firstItem="rfI-ZO-tOh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a9c-zs-cVZ"/>
                             <constraint firstItem="HDb-C3-tUH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="bKa-vo-FPv"/>
+                            <constraint firstItem="nLQ-h2-Ks3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gfO-6Z-pjN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

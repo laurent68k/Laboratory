@@ -10,6 +10,8 @@
 		4D4913FE1F9DFAC800B6C1E6 /* Spaceship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4913FD1F9DFAC800B6C1E6 /* Spaceship.swift */; };
 		4D4914001F9E029A00B6C1E6 /* RefCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4913FF1F9E029A00B6C1E6 /* RefCycle.swift */; };
 		4D4914021F9E07E000B6C1E6 /* Accessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4914011F9E07E000B6C1E6 /* Accessors.swift */; };
+		4D4914041F9E46D200B6C1E6 /* Generic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4914031F9E46D200B6C1E6 /* Generic.swift */; };
+		4D4914061F9E4AC800B6C1E6 /* GenericType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4914051F9E4AC800B6C1E6 /* GenericType.swift */; };
 		4D566C771F8382DC00807519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D566C761F8382DC00807519 /* AppDelegate.swift */; };
 		4D566C791F8382DC00807519 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D566C781F8382DC00807519 /* ViewController.swift */; };
 		4D566C7C1F8382DC00807519 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D566C7A1F8382DC00807519 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 		4D4913FD1F9DFAC800B6C1E6 /* Spaceship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spaceship.swift; sourceTree = "<group>"; };
 		4D4913FF1F9E029A00B6C1E6 /* RefCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefCycle.swift; sourceTree = "<group>"; };
 		4D4914011F9E07E000B6C1E6 /* Accessors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessors.swift; sourceTree = "<group>"; };
+		4D4914031F9E46D200B6C1E6 /* Generic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generic.swift; sourceTree = "<group>"; };
+		4D4914051F9E4AC800B6C1E6 /* GenericType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericType.swift; sourceTree = "<group>"; };
 		4D566C731F8382DC00807519 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D566C761F8382DC00807519 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D566C781F8382DC00807519 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				4D4913FD1F9DFAC800B6C1E6 /* Spaceship.swift */,
 				4D4913FF1F9E029A00B6C1E6 /* RefCycle.swift */,
 				4D4914011F9E07E000B6C1E6 /* Accessors.swift */,
+				4D4914031F9E46D200B6C1E6 /* Generic.swift */,
+				4D4914051F9E4AC800B6C1E6 /* GenericType.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -250,8 +256,10 @@
 			files = (
 				4D4914021F9E07E000B6C1E6 /* Accessors.swift in Sources */,
 				4D4913FE1F9DFAC800B6C1E6 /* Spaceship.swift in Sources */,
+				4D4914041F9E46D200B6C1E6 /* Generic.swift in Sources */,
 				4D566C791F8382DC00807519 /* ViewController.swift in Sources */,
 				4D5EA7881F9B64A30041D96A /* OCPoint3D.mm in Sources */,
+				4D4914061F9E4AC800B6C1E6 /* GenericType.swift in Sources */,
 				4D6A9ACD1F9744DC005505F8 /* Singleton.swift in Sources */,
 				4D5EA7851F9B5F420041D96A /* CPPClasses.cpp in Sources */,
 				4D566C771F8382DC00807519 /* AppDelegate.swift in Sources */,

@@ -25,9 +25,7 @@ public class SingletonClass {
     
     var count : Int {
         
-        get {
-            return self.array.count
-        }
+        return self.array.count
     }
     
     init() {
