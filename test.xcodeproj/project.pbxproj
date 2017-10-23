@@ -13,6 +13,9 @@
 		4D566C7E1F8382DC00807519 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D566C7D1F8382DC00807519 /* Assets.xcassets */; };
 		4D566C811F8382DC00807519 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D566C7F1F8382DC00807519 /* LaunchScreen.storyboard */; };
 		4D566C8C1F8382DC00807519 /* testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D566C8B1F8382DC00807519 /* testTests.swift */; };
+		4D5EA7851F9B5F420041D96A /* CPPClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D5EA7831F9B5F420041D96A /* CPPClass.cpp */; };
+		4D5EA7881F9B64A30041D96A /* OCPoint3D.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D5EA7871F9B64A30041D96A /* OCPoint3D.mm */; };
+		4D6A9ACD1F9744DC005505F8 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6A9ACC1F9744DC005505F8 /* Singleton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,12 @@
 		4D566C871F8382DC00807519 /* testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D566C8B1F8382DC00807519 /* testTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTests.swift; sourceTree = "<group>"; };
 		4D566C8D1F8382DC00807519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D5EA7821F9B5F420041D96A /* test-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test-Bridging-Header.h"; sourceTree = "<group>"; };
+		4D5EA7831F9B5F420041D96A /* CPPClass.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CPPClass.cpp; sourceTree = "<group>"; };
+		4D5EA7841F9B5F420041D96A /* CPPClass.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CPPClass.hpp; sourceTree = "<group>"; };
+		4D5EA7871F9B64A30041D96A /* OCPoint3D.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OCPoint3D.mm; sourceTree = "<group>"; };
+		4D5EA7891F9B64BD0041D96A /* OCPoint3D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCPoint3D.h; sourceTree = "<group>"; };
+		4D6A9ACC1F9744DC005505F8 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +86,9 @@
 		4D566C751F8382DC00807519 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				4D5EA7861F9B64790041D96A /* ObjC */,
+				4D5EA7811F9B5ED00041D96A /* C++ */,
+				4D5EA7801F9B5EBC0041D96A /* Swift */,
 				4D566C761F8382DC00807519 /* AppDelegate.swift */,
 				4D566C781F8382DC00807519 /* ViewController.swift */,
 				4D566C7A1F8382DC00807519 /* Main.storyboard */,
@@ -94,6 +106,33 @@
 				4D566C8D1F8382DC00807519 /* Info.plist */,
 			);
 			path = testTests;
+			sourceTree = "<group>";
+		};
+		4D5EA7801F9B5EBC0041D96A /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				4D6A9ACC1F9744DC005505F8 /* Singleton.swift */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		4D5EA7811F9B5ED00041D96A /* C++ */ = {
+			isa = PBXGroup;
+			children = (
+				4D5EA7831F9B5F420041D96A /* CPPClass.cpp */,
+				4D5EA7841F9B5F420041D96A /* CPPClass.hpp */,
+				4D5EA7821F9B5F420041D96A /* test-Bridging-Header.h */,
+			);
+			path = "C++";
+			sourceTree = "<group>";
+		};
+		4D5EA7861F9B64790041D96A /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				4D5EA7871F9B64A30041D96A /* OCPoint3D.mm */,
+				4D5EA7891F9B64BD0041D96A /* OCPoint3D.h */,
+			);
+			path = ObjC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +185,7 @@
 				TargetAttributes = {
 					4D566C721F8382DC00807519 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					4D566C861F8382DC00807519 = {
@@ -200,6 +240,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D566C791F8382DC00807519 /* ViewController.swift in Sources */,
+				4D5EA7881F9B64A30041D96A /* OCPoint3D.mm in Sources */,
+				4D6A9ACD1F9744DC005505F8 /* Singleton.swift in Sources */,
+				4D5EA7851F9B5F420041D96A /* CPPClass.cpp in Sources */,
 				4D566C771F8382DC00807519 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,12 +396,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2T32WF6U53;
 				INFOPLIST_FILE = test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.laurent68k.tvos.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "test/C++/test-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -368,12 +414,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2T32WF6U53;
 				INFOPLIST_FILE = test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.laurent68k.tvos.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "test/C++/test-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
