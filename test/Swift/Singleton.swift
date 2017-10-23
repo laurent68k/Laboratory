@@ -14,7 +14,7 @@ public class SingletonClass {
     
     private var array : [Int] = []
     
-    private (set) var name : String = "SingletonClass" {
+    var name : String = "SingletonClass" {
         
         didSet(theNewValue) {
             
@@ -31,13 +31,13 @@ public class SingletonClass {
     
     init() {
         
-        print("I'm alive")
+        print("SingletonClass Init()")
         
         self.array = stride(from: 0, to: 21, by: 1).map{ $0 }
         print(self.array)
     }
     deinit {
-        print("I'm dead")
+        print("SingletonClass deinit")
     }
     
     func map() {

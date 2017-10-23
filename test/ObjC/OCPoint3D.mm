@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "OCPoint3D.h"
 
-#import "CPPClass.hpp"
+#import "../C++/CPPClasses.hpp"
 
 /// Private part for this class: "private C++ specific to hide"
 @interface OCPoint3D () {
@@ -75,7 +75,7 @@
     
     //CPPPoint2D toto(0,0);
     
-    self->point3D->print(std::string(text.cString));
+    self->point3D->print(std::string([text cStringUsingEncoding: NSUTF8StringEncoding]));
 }
 
 @end

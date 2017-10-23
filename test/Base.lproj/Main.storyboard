@@ -27,10 +27,46 @@
                                     <action selector="testCPPAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fWf-r3-c2E"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huU-0Y-dcL">
+                                <rect key="frame" x="114" y="145" width="147" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Test Singleton Swift">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="singletonSwiftAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aYp-9d-qqY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7Z-aE-sOs">
+                                <rect key="frame" x="110.5" y="196" width="154" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Test Reference Cycle">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="refCycleAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qS1-dd-B8y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfI-ZO-tOh">
+                                <rect key="frame" x="131" y="247" width="112" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Test Properties">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="testPropertiesAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OOD-7l-aIg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="rfI-ZO-tOh" firstAttribute="top" secondItem="E7Z-aE-sOs" secondAttribute="bottom" constant="21" id="1l0-Jw-AYH"/>
                             <constraint firstItem="HDb-C3-tUH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5dX-FB-r2f"/>
+                            <constraint firstItem="E7Z-aE-sOs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E97-0R-Whi"/>
+                            <constraint firstItem="huU-0Y-dcL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LLZ-w0-QMQ"/>
+                            <constraint firstItem="E7Z-aE-sOs" firstAttribute="top" secondItem="huU-0Y-dcL" secondAttribute="bottom" constant="21" id="Nky-DJ-8Qc"/>
+                            <constraint firstItem="huU-0Y-dcL" firstAttribute="top" secondItem="HDb-C3-tUH" secondAttribute="bottom" constant="25" id="TBL-2O-WgU"/>
+                            <constraint firstItem="rfI-ZO-tOh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a9c-zs-cVZ"/>
                             <constraint firstItem="HDb-C3-tUH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="bKa-vo-FPv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -38,6 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>
