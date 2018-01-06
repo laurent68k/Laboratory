@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Stack<Element> {
+class Stack<Element: Equatable> {
     
     private var array = [Element]()
     
@@ -30,6 +30,18 @@ class Stack<Element> {
         
             return self.array.removeLast()
         }
+        return nil
+    }
+    
+    func findIndex(of valueToFind: Element) -> Int? {
+        
+        for (index, value) in self.array.enumerated() {
+        
+            if value == valueToFind {
+                return index
+            }
+        }
+        
         return nil
     }
     

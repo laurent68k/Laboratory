@@ -28,7 +28,7 @@ public class SingletonClass {
         return self.array.count
     }
     
-    init() {
+    private init() {
         
         print("SingletonClass Init()")
         

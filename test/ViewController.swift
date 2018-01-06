@@ -7,19 +7,164 @@
 //
 
 import UIKit
+import RxSwift
 
 class ViewController: UIViewController {
-  
+
+    var activityIndicator : UIActivityIndicatorView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.test004()
+        self.addActivityIndicator()
+    }
+    
+    
+    override func viewDidLayoutSubviews() {
+        
+        super.viewDidLayoutSubviews()
+        
+        
+    }
+    
+    /**
+        Add programmaticaly an UIActivityIndicatorView
+     */
+    private func addActivityIndicator() {
+     
+        //  If not already created
+        if self.activityIndicator == nil {
+            
+            self.activityIndicator = UIActivityIndicatorView()
+            //  Unwrap to manipulate easily
+            if let activityIndicator = self.activityIndicator {
+                
+                //  Set my preferrences
+                activityIndicator.activityIndicatorViewStyle = .whiteLarge
+                activityIndicator.hidesWhenStopped = true
+                activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+                
+                self.view.addSubview(activityIndicator)
+                
+                //  finally add the constraints for the UI
+                let horizontalConstraint = NSLayoutConstraint(item: activityIndicator, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: self.view, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0)
+                
+                let verticalConstraint = NSLayoutConstraint(item: activityIndicator, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: self.view, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0)
+                
+                self.view.addConstraint(horizontalConstraint)
+                self.view.addConstraint(verticalConstraint)
+            }
+        }
+    }
+    
+    let disposeBag = DisposeBag()
+    
+    @IBAction func activityAction(_ sender: Any) {
+        
+        if let activity = self.activityIndicator {
+            
+            if activity.isAnimating {
+                
+                activity.stopAnimating()
+            }
+            else {
+                
+                activity.startAnimating()
+            }
+        }
+    }
+    
+    func test2() {
+    
+        let myVarObservable = Variable<Int>(0)
+        
+        for i in 1...3 {
+        
+            myVarObservable.value = i
+        }
+        
+        myVarObservable.asObservable().subscribe({
+            
+            value in
+            
+            print("value:\(value)")
+            
+        }).disposed(by: self.disposeBag)
+
+        for i in 4...6 {
+            
+            myVarObservable.value = i
+        }
+    }
+    
+    func test1() {
         
         //  Test with mutating func on struct
         var enterprise = Spaceship(name: "Enterprise")
         enterprise.setName("Enterprise A")
         print(enterprise.name)
+        
+        let numbers = [1, 2, 3].flatMap { [$0, $0] }
+        print("\(numbers)")
+        
+        let numbers3 = [[1], [2], [3]].flatMap { [$0, $0] }
+        print("\(numbers3)")
+
+        let numbers2 = [1, 2, 3].map { [$0, $0] }
+        print("\(numbers2)")
+
+        let numbers4 = [[1], [2], [3]].map { [$0, $0] }
+        print("\(numbers4)")
+        
+        let array = [1, 3, 5, 7, 9]
+        let result1 = array.reduce(0, +)
+        print("\(result1)")
+        
+        let i = 10
+        let correct = 9...11 ~= i
+        print("\(correct)")
+        
+        let names = ["River", "Kaylee", "Zoe"]
+        let result2 = names.sorted { $0 > $1 }
+        print(result2)
+        
+        let result3 = UInt8.max.addingReportingOverflow(1)
     }
 
+    func test03() {
+        
+        let entier = 4
+        
+        switch entier {
+            
+        case    1:
+            break
+        case    2:
+            break
+            
+        default:
+            break
+            
+        }
+    }
+    
+    func test004() {
+        
+        var myDico = [Int:String]()
+        
+        myDico[1] = "Un"
+        
+        myDico[2] = "Deux"
+        
+        print("\(myDico.count)")
+        
+        myDico.removeValue(forKey: 2)
+
+        print("\(myDico.count)")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -41,6 +186,8 @@ class ViewController: UIViewController {
         
         let a1 = SingletonClass.sharedInstance
         let a2 = SingletonClass.sharedInstance
+        
+        //let a3 = SingletonClass()
         
         print(a1.name)
         print(a2.name)

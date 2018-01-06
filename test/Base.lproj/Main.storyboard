@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -67,6 +67,13 @@
                                     <action selector="testGenericsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PJd-MB-2Rh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISt-vJ-pld">
+                                <rect key="frame" x="162" y="494" width="50" height="30"/>
+                                <state key="normal" title="activity"/>
+                                <connections>
+                                    <action selector="activityAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TWV-S2-9pX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -79,7 +86,9 @@
                             <constraint firstItem="nLQ-h2-Ks3" firstAttribute="top" secondItem="rfI-ZO-tOh" secondAttribute="bottom" constant="21" id="Yqb-iI-Y46"/>
                             <constraint firstItem="rfI-ZO-tOh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a9c-zs-cVZ"/>
                             <constraint firstItem="HDb-C3-tUH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="bKa-vo-FPv"/>
+                            <constraint firstItem="ISt-vJ-pld" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cCN-R8-IDb"/>
                             <constraint firstItem="nLQ-h2-Ks3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gfO-6Z-pjN"/>
+                            <constraint firstItem="ISt-vJ-pld" firstAttribute="top" secondItem="nLQ-h2-Ks3" secondAttribute="bottom" constant="166" id="xxA-H1-1L5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
