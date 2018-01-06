@@ -11,7 +11,7 @@ import RxSwift
 
 class ViewController: UIViewController {
 
-    var activityIndicator : UIActivityIndicatorView?
+    var activityIndicator : OSLActivityIndicatorView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         
         super.viewDidLayoutSubviews()
         
-        
+
     }
     
     /**
@@ -37,13 +37,13 @@ class ViewController: UIViewController {
         //  If not already created
         if self.activityIndicator == nil {
             
-            self.activityIndicator = UIActivityIndicatorView()
+            self.activityIndicator = OSLActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 1024, height: 1024))
             //  Unwrap to manipulate easily
             if let activityIndicator = self.activityIndicator {
                 
                 //  Set my preferrences
-                activityIndicator.activityIndicatorViewStyle = .whiteLarge
-                activityIndicator.hidesWhenStopped = true
+//                activityIndicator.activityIndicatorViewStyle = .whiteLarge
+//                activityIndicator.hidesWhenStopped = true
                 activityIndicator.translatesAutoresizingMaskIntoConstraints = false
                 
                 self.view.addSubview(activityIndicator)
