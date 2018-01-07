@@ -42,8 +42,6 @@ class ViewController: UIViewController {
             if let activityIndicator = self.activityIndicator {
                 
                 //  Set my preferrences
-//                activityIndicator.activityIndicatorViewStyle = .whiteLarge
-//                activityIndicator.hidesWhenStopped = true
                 activityIndicator.translatesAutoresizingMaskIntoConstraints = false
                 
                 self.view.addSubview(activityIndicator)

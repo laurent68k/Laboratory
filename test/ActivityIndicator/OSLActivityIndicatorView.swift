@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ Represent an advanced UIActivityIndicatorView embedded in an UIView subclassed.
+ */
 class OSLActivityIndicatorView: UIView {
 
     //  -------------------------------------------------------------------------------------------------------------------------------------------
