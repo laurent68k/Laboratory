@@ -21,9 +21,9 @@
 		4D5EA7851F9B5F420041D96A /* CPPClasses.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D5EA7831F9B5F420041D96A /* CPPClasses.cpp */; };
 		4D5EA7881F9B64A30041D96A /* OCPoint3D.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4D5EA7871F9B64A30041D96A /* OCPoint3D.mm */; };
 		4D6A9ACD1F9744DC005505F8 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6A9ACC1F9744DC005505F8 /* Singleton.swift */; };
-		4DC87DCE20013CCD000B671C /* OSLActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC87DCD20013CCD000B671C /* OSLActivityIndicatorView.swift */; };
 		8982A1AFFE4C88DE19CC323D /* Pods_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7040E240E98F30C150F5AA7 /* Pods_test.framework */; };
 		8E21C1F8D5AC443EC1DDC6EE /* Pods_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79544B0796D2527C46686FDA /* Pods_testTests.framework */; };
+		EC2463ED2004C9D1002D458C /* OSLActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2463EC2004C9D1002D458C /* OSLActivityIndicatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,12 +59,12 @@
 		4D5EA7871F9B64A30041D96A /* OCPoint3D.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OCPoint3D.mm; sourceTree = "<group>"; };
 		4D5EA7891F9B64BD0041D96A /* OCPoint3D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCPoint3D.h; sourceTree = "<group>"; };
 		4D6A9ACC1F9744DC005505F8 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
-		4DC87DCD20013CCD000B671C /* OSLActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OSLActivityIndicatorView.swift; path = ../../../../../Xcode/iOS/Laboratory/test/ActivityIndicator/OSLActivityIndicatorView.swift; sourceTree = "<group>"; };
 		79544B0796D2527C46686FDA /* Pods_testTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84AF796CB1BED0F3B320198E /* Pods-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-test/Pods-test.debug.xcconfig"; sourceTree = "<group>"; };
 		88FC5617756DB31614B0DDAF /* Pods-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.release.xcconfig"; path = "Pods/Target Support Files/Pods-test/Pods-test.release.xcconfig"; sourceTree = "<group>"; };
 		D7040E240E98F30C150F5AA7 /* Pods_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA845017A454120F90D231B7 /* Pods-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-testTests/Pods-testTests.release.xcconfig"; sourceTree = "<group>"; };
+		EC2463EC2004C9D1002D458C /* OSLActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSLActivityIndicatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +168,7 @@
 		4DC87DCC20013C90000B671C /* ActivityIndicator */ = {
 			isa = PBXGroup;
 			children = (
-				4DC87DCD20013CCD000B671C /* OSLActivityIndicatorView.swift */,
+				EC2463EC2004C9D1002D458C /* OSLActivityIndicatorView.swift */,
 			);
 			path = ActivityIndicator;
 			sourceTree = "<group>";
@@ -406,7 +406,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D4914021F9E07E000B6C1E6 /* Accessors.swift in Sources */,
-				4DC87DCE20013CCD000B671C /* OSLActivityIndicatorView.swift in Sources */,
 				4D4913FE1F9DFAC800B6C1E6 /* Spaceship.swift in Sources */,
 				4D4914041F9E46D200B6C1E6 /* Generic.swift in Sources */,
 				4D566C791F8382DC00807519 /* ViewController.swift in Sources */,
@@ -416,6 +415,7 @@
 				4D5EA7851F9B5F420041D96A /* CPPClasses.cpp in Sources */,
 				4D566C771F8382DC00807519 /* AppDelegate.swift in Sources */,
 				4D4914001F9E029A00B6C1E6 /* RefCycle.swift in Sources */,
+				EC2463ED2004C9D1002D458C /* OSLActivityIndicatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,59 +19,62 @@ class OSLActivityIndicatorView: UIView {
     override init(frame: CGRect) {
         
         super.init(frame: frame)
-        
-        self.backgroundColor = .clear
 
+        self.myDraw()
         self.addActivityIndicator()
     }
     
     convenience init() {
         
         self.init(frame: CGRect.zero)
-        
-        self.addActivityIndicator()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    private func myDraw() {
+        
+        self.backgroundColor = .clear
+        self.layer.cornerRadius = 6
+    }
+    
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-     
-        super.draw(rect)
-        
-        // Size of rounded rectangle
-        let rectWidth = rect.width
-        let rectHeight = rect.height
-
-        // Find center of actual frame to set rectangle in middle
-        let xf:CGFloat = (self.frame.width  - rectWidth)  / 2
-        let yf:CGFloat = (self.frame.height - rectHeight) / 2
-
-        let ctx: CGContext = UIGraphicsGetCurrentContext()!
-        ctx.saveGState()
-
-        let rect = CGRect(x: xf, y: yf, width: rectWidth, height: rectHeight)
-        let clipPath: CGPath = UIBezierPath(roundedRect: rect, cornerRadius: 6).cgPath
-
-        ctx.addPath(clipPath)
-        
-        if let activity = self.activityIndicator {
-        
-            if activity.isAnimating {
-                ctx.setFillColor(UIColor.darkGray.cgColor)
-            }
-            else {
-                ctx.setFillColor(UIColor.clear.cgColor)
-            }
-        }
-        
-        ctx.closePath()
-        ctx.fillPath()
-        ctx.restoreGState()
-    }
+//    override func draw(_ rect: CGRect) {
+//
+//        super.draw(rect)
+//
+//        // Size of rounded rectangle
+//        let rectWidth = rect.width
+//        let rectHeight = rect.height
+//
+//        // Find center of actual frame to set rectangle in middle
+//        let xf:CGFloat = (self.frame.width  - rectWidth)  / 2
+//        let yf:CGFloat = (self.frame.height - rectHeight) / 2
+//
+//        let ctx: CGContext = UIGraphicsGetCurrentContext()!
+//        ctx.saveGState()
+//
+//        let rect = CGRect(x: xf, y: yf, width: rectWidth, height: rectHeight)
+//        let clipPath: CGPath = UIBezierPath(roundedRect: rect, cornerRadius: 6).cgPath
+//
+//        ctx.addPath(clipPath)
+//
+//        if let activity = self.activityIndicator {
+//
+//            if activity.isAnimating {
+//                ctx.setFillColor(UIColor.darkGray.cgColor)
+//            }
+//            else {
+//                ctx.setFillColor(UIColor.clear.cgColor)
+//            }
+//        }
+//
+//        ctx.closePath()
+//        ctx.fillPath()
+//        ctx.restoreGState()
+//    }
 
     //  -------------------------------------------------------------------------------------------------------------------------------------------
     //  -------------------------------------------------------------------------------------------------------------------------------------------
@@ -79,13 +82,17 @@ class OSLActivityIndicatorView: UIView {
     func startAnimating() {
         
         self.activityIndicator?.startAnimating()
-        self.setNeedsDisplay()
+        
+        self.backgroundColor = .red
+        //self.setNeedsDisplay()
     }
     
     func stopAnimating() {
         
         self.activityIndicator?.stopAnimating()
-        self.setNeedsDisplay()
+
+        self.backgroundColor = .clear
+        //self.setNeedsDisplay()
     }
 
     var isAnimating : Bool {
@@ -132,6 +139,8 @@ class OSLActivityIndicatorView: UIView {
                 activityIndicator.activityIndicatorViewStyle = .whiteLarge
                 activityIndicator.hidesWhenStopped = true
                 activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+            
+                activityIndicator.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
                 
                 self.addSubview(activityIndicator)
                 
